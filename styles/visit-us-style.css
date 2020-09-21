@@ -1,0 +1,43 @@
+.title{
+    background: url("/img/visitus_cover.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25vw;
+    text-align:center;
+}
+
+h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: calc(2vw + 30pt);
+}
+p{
+    font-size:  calc(0.25vw + 10pt);
+}
+
+.body-container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.address-group{
+    text-align: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+h1{
+    font-size: calc(5vw + 13pt);
+}
+
+p {
+    font-size: calc(1vw + 10pt);
+}

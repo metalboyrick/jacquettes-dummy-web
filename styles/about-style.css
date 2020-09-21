@@ -1,0 +1,169 @@
+.title{
+    background: url("/img/about_header_image.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25vw;
+    text-align:center;
+}
+h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: calc(2vw + 30pt);
+}
+p{
+    font-size:  calc(0.25vw + 10pt);
+}
+
+/*about page styles*/
+.about-body{
+    display: block;
+    overflow:hidden;
+}
+
+.row-container{
+    display:flex;
+}
+
+.content-row{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+}
+
+#line-container{
+    width:6vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#line-inside{
+    position: absolute;
+    height: 90%;
+    width: 1px;
+    border-right: 3px dashed black;
+    z-index: 2;
+}
+
+.about-content{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height:94vh;
+    width: 47vw;
+
+    text-align:left;
+}
+#right-content{
+    text-align: right;
+}
+.about-content-text{
+    width: 30vw;
+    min-width: 200px;
+    margin-top: 2vh;
+}
+#right-text{
+    padding-left: 17vw;
+}
+.about-img{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    height: 94vh;
+    width: 47vw;
+    
+}
+.about-image{
+    height: 40vh;
+}
+/*call to action*/
+.call-to-action{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+#message{
+    background-color: #008037;
+    color:white;
+}
+#big{
+    font-size: 13vh;
+}
+#small{
+    position: relative;
+    top:-4vh;
+}
+#call-to-action-button{
+    text-decoration: none;
+    background-color: #c9e265;
+    font-family: "Bebas Neue", cursive;
+    font-size: 40pt;
+    color: black;
+}
+#call-to-action-button:hover{
+    background-color: red;
+    color: white;
+    font-family: "Bebas Neue", cursive;
+    font-size: 50pt;
+
+    animation: expand;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+
+}
+
+@keyframes expand{
+    from{
+        background-color: #c9e265;
+        color: black; 
+        font-size: 40pt;
+    }
+    to{
+        background-color: red;
+        color: white;
+        font-size: 50pt;
+    }
+}
+
+
+/*responsive*/
+@media screen and (max-width: 1120px){
+    #line-container{
+        display:none;
+    }
+
+    .about-img{
+        display:none;
+    }
+
+    .row-container{
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        align-content: space-between;
+    }
+    .about-content, #right-content{
+        text-align:justify;
+        align-self: center;
+    }
+    .about-content-text{
+        width: 60vw;
+        align-self: center;
+    }
+    .about-content-header{
+        text-align:center;
+        align-self: center;
+    }
+
+    #right-text{
+        padding: 0;
+    }
+    
+}
+

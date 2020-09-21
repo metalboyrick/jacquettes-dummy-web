@@ -1,0 +1,257 @@
+/*css reset*/
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*navigation pane*/
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding : 3vh;
+    align-items: center;
+    position:fixed;
+    z-index:9;
+}
+
+.nav-bar[status*="no-background"] {
+    color:white;
+    background-color:transparent;
+
+    animation: fadeOut;
+    animation-duration : 0.35s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+.nav-bar[status*="with-background"] {
+    color:black;
+    background-color:white;
+
+    animation: fadeIn;
+    animation-duration : 0.35s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+@keyframes fadeIn{
+    from {
+        background-color: transparent;
+    }
+    to {
+        background-color: white;
+    }
+}
+@keyframes fadeOut{
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: transparent;
+    }
+}
+
+.logo {
+    font-family: 'Antic', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    flex: 5;
+}
+
+#nav-list-container{
+    position:relative;
+    display: flex;
+    justify-content: space-around;
+    flex: 3;
+    list-style : none; 
+    right: 10vh;
+
+}
+
+.nav-item{
+    text-decoration: none;
+    color:white;
+}
+
+.nav-item:hover{
+    color:gray;
+    text-decoration: underline;
+}
+
+.burger{
+    display:none;
+    font-size: 24px;
+    flex: 1;
+}
+
+.scroll-down{
+    position: fixed;
+    top: 93vh;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    color: white;
+
+    animation:flyAround;
+    animation-timing-function:ease-in-out;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+#scroll-icon{
+    font-size: 30pt;
+}
+@keyframes flyAround{
+    0%{
+        top: 90vh;
+    }
+    50%{
+        top: 93vh;
+    }
+    100%{
+        top: 90vh;
+    }
+}
+
+
+
+/*intermediary*/
+@media screen and (max-width:1350px){
+    #nav-list-container{
+        flex:5
+    }
+}
+
+
+/*mobile version*/
+@media screen and (max-width: 768px){
+    .burger{
+        display: block;
+        cursor:pointer;
+    }
+    #nav-list-container{
+        position: absolute;
+        right: 0px;
+        height: 40vh;
+        top: calc(6vh + 30px);
+        background-color: white;
+        display:flex;
+        flex-direction:column;
+        width:50%;
+        text-align:center;
+        color: white;
+    }
+    #nav-list-container[is-shown*="false"]{
+        transform:translateX(100%);
+    }
+    #nav-list-container[is-shown*="true"]{
+        transform:translateX(0%);
+        animation: slideIn;
+        
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 1;
+    }
+    .nav-item{
+        position:relative;
+        right:7%;
+    }
+    .logo{
+        flex:5;
+        text-align:center;
+    }
+
+    @keyframes slideIn{
+        from{
+            transform:translateX(100%);
+        }
+        to{
+            transform:translateX(0%);
+        }
+    }
+
+    .scroll-down{
+        position: fixed;
+        top: 85vh;
+        width: 100%;
+        text-align: center;
+        z-index: 10;
+        color: white;
+    
+        animation:flyAround;
+        animation-timing-function:ease-in-out;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    #scroll-icon{
+        font-size: 30pt;
+    }
+    @keyframes flyAround{
+        0%{
+            top: 85vh;
+        }
+        50%{
+            top: 88vh;
+        }
+        100%{
+            top: 85vh;
+        }
+    }
+    
+}
+
+
+
+/*footer*/
+footer {
+    overflow: hidden;
+    background-color: #2d544c;
+    position:relative;
+    z-index:8;
+    color: white;
+    text-align:center;
+    
+}
+#copyright-bar{
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    color: gray;
+}
+
+#social-medias{
+    font-size : 30pt;
+    letter-spacing: 5px;
+}
+
+.footer-entry{
+    padding: 5px;
+    position: relative;
+    top : 5%;
+}
+
+#nav-footer{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    background-color: #1b332e;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    list-style:none;
+}
+
+.nav-footer-item{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-footer-item:hover{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: underline;
+    color: white;
+}

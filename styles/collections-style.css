@@ -1,0 +1,43 @@
+.title{
+    background: url("/img/collections-cover.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20vw;
+    text-align:center;
+}
+h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: calc(3vw + 30pt);
+    text-align: center;
+}
+p{
+    font-size:  calc(0.25vw + 10pt);
+    text-align: center;
+}
+
+.collections-frame{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* collections box */
+.collection-item{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width: 350px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.collection-img{
+    max-width: 300px;
+    max-height: 350px;
+}
